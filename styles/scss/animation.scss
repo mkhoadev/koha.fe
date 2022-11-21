@@ -1,0 +1,51 @@
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes animatedupdown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes animatedzoom {
+    0% {
+        transform: scale(1) rotate(45deg);
+    }
+
+    50% {
+        transform: scale(0.8) rotate(45deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(45deg);
+    }
+}
+
+@keyframes animatedzoomimage {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
