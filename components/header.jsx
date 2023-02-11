@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../assets/images/logo.png";
 
 import { BiMoon, BiSun } from "react-icons/bi";
@@ -19,12 +20,14 @@ function Header() {
 
     return (
         <div className="header-wrap">
-            <div className="container header-layout">
+            <div className="header-layout">
                 <div className="header-left">
-                    <div className="logo">
-                        <Image src={Logo} alt="logo" />
-                        <span>KOHA</span>
-                    </div>
+                    <Link href="/">
+                        <div className="logo">
+                            <Image src={Logo} alt="logo" />
+                            <span>KOHA</span>
+                        </div>
+                    </Link>
                     <div className="search">
                         <input placeholder="Search" />
                         <div className="symbol">
@@ -32,12 +35,21 @@ function Header() {
                         </div>
                     </div>
                     <div>
-                        <span>Create</span>
+                        <Link href="/explore">
+                            <span>Explore</span>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link href="/create">
+                            <span>Create</span>
+                        </Link>
                     </div>
                 </div>
                 <div className="header-right">
                     <div>
-                        <button>Connect Wallet</button>
+                        <Link href="/connect">
+                            <button>Connect Wallet</button>
+                        </Link>
                     </div>
                     <button className="dark-mode" onClick={() => setDarkMode(!darkmode)}>
                         <BiMoon

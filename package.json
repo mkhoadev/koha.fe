@@ -9,11 +9,16 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@reduxjs/toolkit": "^1.9.0",
+        "ethers": "^5.7.2",
         "next": "13.0.3",
         "react": "18.2.0",
         "react-dom": "18.2.0",
+        "react-easy-flip": "^4.0.3",
         "react-icons": "^4.6.0",
+        "react-redux": "^8.0.5",
         "react-slick": "^0.29.0",
+        "react-virtualized": "^9.22.3",
         "sass": "^1.56.1",
         "slick-carousel": "^1.8.1"
     },

@@ -1,0 +1,101 @@
+.collection-wrap {
+    height: 500px;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .collection-grid {
+        display: grid;
+        grid-template-columns: var(--grid-col-4);
+        gap: 20px;
+
+        .collection-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+
+            .item-left {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+                .no {
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        display: block;
+                        color: var(--color-3);
+                    }
+                }
+
+                .collection-image {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 5px;
+                    border: 2px solid var(--color-3);
+                    box-sizing: border-box;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .collection-information {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    span {
+                        display: block;
+
+                        &:first-child {
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: var(--color-3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .collection-wrap {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .collection-grid {
+        width: max-content !important;
+        grid-template-columns: var(--grid-col-4) !important;
+    }
+
+    .collection-item {
+        min-width: 315px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .collection-item {
+        min-width: 352px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .collection-item {
+        min-width: 385px;
+    }
+}

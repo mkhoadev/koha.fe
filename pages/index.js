@@ -1,11 +1,11 @@
+import CollectionTop from "../components/collection-top";
 import Introduction from "../components/introduction";
-import TopCollection from "../components/top-collection";
 
 export default function Home() {
     return (
         <div>
             <Introduction />
-            <TopCollection />
+            <CollectionTop />
         </div>
     );
 }

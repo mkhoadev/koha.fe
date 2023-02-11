@@ -1,18 +1,16 @@
-.container {
-    width: 95%;
-    margin: 0 auto;
-}
-
 .header-wrap {
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 101;
-    padding: 25px 0;
-    background-color: var(--color-rbga-2-90);
+    background-color: var(--color-rbga-2-95);
 }
 
 .header-layout {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 25px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;

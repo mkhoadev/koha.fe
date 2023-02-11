@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card() {
+function NftCard() {
     return (
         <div className="background-card">
             <div className="card-layout">
@@ -10,4 +10,4 @@ function Card() {
     );
 }
 
-export default Card;
+export default NftCard;
