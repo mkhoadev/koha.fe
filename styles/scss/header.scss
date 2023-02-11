@@ -39,6 +39,11 @@
             }
         }
 
+        .menu-desktop {
+            display: flex;
+            gap: 15px;
+        }
+
         .search {
             position: relative;
 
@@ -85,7 +90,7 @@
             font-weight: 600;
             font-family: "Poppins";
             padding: 12px 20px;
-            border-radius: 15px;
+            border-radius: 10px;
             border: none;
             background-color: var(--color-0);
             transition: 0.2s linear;
@@ -122,12 +127,37 @@
                 transform: translate(-50%, -50%);
             }
         }
+
+        .menu-mobile {
+            display: none;
+            height: 25px;
+        }
     }
 }
 
-@media screen and (max-width: 769px) {
-    .dark-mode,
+@media screen and (max-width: 860px) {
     .search {
         display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dark-mode {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header-layout {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .menu-desktop {
+        display: none !important;
+    }
+
+    .menu-mobile {
+        display: block !important;
     }
 }

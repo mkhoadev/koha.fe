@@ -198,9 +198,10 @@
     }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .introduction-layout {
         flex-direction: column;
+        gap: 20px !important;
 
         .introduction-right {
             width: 100%;
@@ -211,5 +212,19 @@
             width: 100%;
             order: 2;
         }
+    }
+
+    .introduction-layout .introduction-left .action-btn {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .introduction-layout .introduction-left h1 {
+        font-size: 40px;
+    }
+
+    .introduction-layout .introduction-left .action-btn {
+        gap: 20px;
     }
 }

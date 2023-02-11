@@ -1,5 +1,5 @@
 .collection-wrap {
-    height: 500px;
+    // height: 500px;
 
     h1 {
         text-align: center;
@@ -79,9 +79,9 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .collection-wrap {
-        width: 100%;
-        overflow-x: scroll;
+    .container.collection {
+        width: 100% !important;
+        overflow-x: scroll !important;
     }
 
     .collection-grid {
@@ -90,18 +90,31 @@
     }
 
     .collection-item {
+        width: 100% !important;
         min-width: 315px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .collection-item {
-        min-width: 352px;
+        min-width: 354px;
     }
 }
 
 @media screen and (max-width: 425px) {
     .collection-item {
         min-width: 385px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .collection-item {
+        min-width: 335px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .collection-item {
+        min-width: 320px;
     }
 }

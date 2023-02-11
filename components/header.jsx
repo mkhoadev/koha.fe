@@ -4,6 +4,7 @@ import Link from "next/link";
 import Logo from "../assets/images/logo.png";
 
 import { BiMoon, BiSun } from "react-icons/bi";
+import { AiOutlineMenu } from "react-icons/ai";
 
 function Header() {
     const [darkmode, setDarkMode] = useState(false);
@@ -34,15 +35,17 @@ function Header() {
                             <span>/</span>
                         </div>
                     </div>
-                    <div>
-                        <Link href="/explore">
-                            <span>Explore</span>
-                        </Link>
-                    </div>
-                    <div>
-                        <Link href="/create">
-                            <span>Create</span>
-                        </Link>
+                    <div className="menu-desktop">
+                        <div>
+                            <Link href="/explore">
+                                <span>Explore</span>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href="/create">
+                                <span>Create</span>
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 <div className="header-right">
@@ -50,6 +53,9 @@ function Header() {
                         <Link href="/connect">
                             <button>Connect Wallet</button>
                         </Link>
+                    </div>
+                    <div className="menu-mobile">
+                        <AiOutlineMenu size={25} />
                     </div>
                     <button className="dark-mode" onClick={() => setDarkMode(!darkmode)}>
                         <BiMoon

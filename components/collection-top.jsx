@@ -5,8 +5,8 @@ import Collection from "../assets/collection-image/collection-1.jpg";
 function CollectionTop() {
     return (
         <div className="collection-wrap">
-            <div className="container">
-                <h1>Collection Top</h1>
+            <h1>Collection Top</h1>
+            <div className="container collection">
                 <div className="collection-grid">
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((item) => (
                         <div key={item} className="collection-item">
