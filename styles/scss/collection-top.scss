@@ -72,6 +72,12 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .collection-grid {
+        grid-template-columns: var(--grid-col-3) !important;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .collection-wrap {
         width: 100%;
