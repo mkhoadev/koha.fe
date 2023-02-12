@@ -107,6 +107,18 @@
     }
 }
 
+@media screen and (max-width: 414px) {
+    .collection-item {
+        min-width: 370px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .collection-item {
+        min-width: 345px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .collection-item {
         min-width: 335px;
@@ -116,5 +128,11 @@
 @media screen and (max-width: 360px) {
     .collection-item {
         min-width: 320px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .collection-item {
+        min-width: 280px;
     }
 }
