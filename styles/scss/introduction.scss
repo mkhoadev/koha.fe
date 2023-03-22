@@ -214,17 +214,27 @@
         }
     }
 
-    .introduction-layout .introduction-left .action-btn {
-        margin-top: 20px;
+    .introduction-layout {
+        .introduction-left {
+            .action-btn {
+                margin-top: 20px;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 425px) {
-    .introduction-layout .introduction-left h1 {
-        font-size: 40px;
+    .introduction-layout {
+        .introduction-left h1 {
+            font-size: 40px;
+        }
     }
 
-    .introduction-layout .introduction-left .action-btn {
-        gap: 20px;
+    .introduction-layout {
+        .introduction-left {
+            .action-btn {
+                gap: 20px;
+            }
+        }
     }
 }

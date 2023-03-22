@@ -820,6 +820,11 @@ react-easy-flip@^4.0.3:
   resolved "https://registry.yarnpkg.com/react-easy-flip/-/react-easy-flip-4.0.3.tgz#646f6d78a3695004129efdf6cd8cf8329a62a743"
   integrity sha512-hfQLj/tkPvRJ5MQHVEaWh+2T8aXZ4YIcGuP1k187KraAFyJwt992sLc9bd190K01ifBWtEL3nT/AuvhJRk//GQ==
 
+react-hook-form@^7.43.7:
+  version "7.43.7"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.43.7.tgz#88b8bc257635d706955e19c05254fb492fa77ad1"
+  integrity sha512-38yehQkQQ5uufaPKFScs7jhLE8n3+LG9H/BZfFAiBL2+7piDmw/BrdNJV4irzMaPnWZGhmGLHVICHXNVGIuXZg==
+
 react-icons@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.6.0.tgz#f83eda179af5d02c047449a20b702c858653d397"

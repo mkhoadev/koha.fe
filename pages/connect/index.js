@@ -1,33 +1,23 @@
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useForm } from "react-hook-form";
 import MetaMaskLogo from "../../assets/images/metamask-logo.png";
 
 import { connectWallet } from "../../web3Providers/AppProviders";
 
 function Connect() {
-    useEffect(() => {
-        const active = document.getElementById("tab-active");
-        const tab = document.getElementsByClassName("tab");
-        active.style.width = tab[0].clientWidth + "px";
+    const { register, handleSubmit } = useForm();
+    const router = useRouter();
+    const [tab, setTab] = useState("login");
 
-        let tmp = 0;
-        for (var i = 0; i < tab.length; i++) {
-            var current = tab[i];
-            current.dataset.width = tab[i].clientWidth + "px";
-            if (i === 0) {
-                current.dataset.order = "0px";
-            } else {
-                tmp += tab[i - 1].clientWidth + 25;
-                current.dataset.order = tmp + "px";
-            }
-            current.addEventListener("click", (e) => {
-                var order = e.currentTarget.dataset.order;
-                var width = e.currentTarget.dataset.width;
-                active.style.transform = `translateX(${order})`;
-                active.style.width = width;
-            });
-        }
-    }, []);
+    useEffect(() => {
+        const path = router?.asPath;
+        setTab(path.slice(path.search("#") + 1));
+    }, [router]);
+
+    const onSubmit = (data) => console.log(data);
 
     return (
         <div className="connect-wrap">
@@ -44,6 +34,16 @@ function Connect() {
                     </div>
                     <div className="tabs">
                         <div className="tab-list">
+                            <Link href="#login">
+                                <div className="tab">
+                                    <span>Login</span>
+                                </div>
+                            </Link>
+                            <Link href="#register">
+                                <div className="tab">
+                                    <span>Register</span>
+                                </div>
+                            </Link>
                             <div className="tab">
                                 <span>Ethereum</span>
                             </div>
@@ -53,20 +53,52 @@ function Connect() {
                             <div className="tab">
                                 <span>Polygon</span>
                             </div>
-                            <div className="tab">
-                                <span>Login</span>
-                            </div>
-                            <div className="tab">
-                                <span>Register</span>
-                            </div>
                         </div>
-                        <div id="tab-active"></div>
                     </div>
                     <div className="wallet-box">
-                        <div className="wallet-item" onClick={() => connectWallet()}>
+                        {/* <div className="wallet-item" onClick={() => connectWallet()}>
                             <Image className="metamask-logo" src={MetaMaskLogo} />
                             <span className="title-wallet">MetaMask</span>
-                        </div>
+                        </div> */}
+                        {tab === "login" && (
+                            <div className="form-login">
+                                <form onSubmit={handleSubmit(onSubmit)}>
+                                    <div className="input-field">
+                                        <label>Username</label>
+                                        <input type="text" {...register("name")} />
+                                    </div>
+                                    <div className="input-field">
+                                        <label>Password</label>
+                                        <input type="text" {...register("password")} />
+                                    </div>
+                                    <div className="action-field">
+                                        <button>Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        )}
+
+                        {tab === "register" && (
+                            <div className="form-login">
+                                <form onSubmit={handleSubmit(onSubmit)}>
+                                    <div className="input-field">
+                                        <label>Username</label>
+                                        <input type="text" {...register("name")} />
+                                    </div>
+                                    <div className="input-field">
+                                        <label>Password</label>
+                                        <input type="text" {...register("password")} />
+                                    </div>
+                                    <div className="input-field">
+                                        <label>Confirm Password</label>
+                                        <input type="text" {...register("confirmPassword")} />
+                                    </div>
+                                    <div className="action-field">
+                                        <button>Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

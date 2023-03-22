@@ -31,18 +31,27 @@ body {
     z-index: -10;
 }
 
-button:active {
-    transform: scale(0.9);
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-4);
-}
-
 .body-container {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+button {
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+input:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-4);
 }
