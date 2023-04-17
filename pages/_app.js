@@ -6,27 +6,23 @@ import "../styles/scss/main.scss";
 
 import { useRouter } from "next/router";
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps }) {
-    const router = useRouter();
+  const router = useRouter();
 
-    return (
-        <>
-            <Head>
-                <title>KOHA</title>
-            </Head>
-            {router.pathname.split("/")[1].toLowerCase() === "connect" ? (
-                <Component {...pageProps} />
-            ) : (
-                <>
-                    <Header />
-                    <div className="body-container">
-                        <Component {...pageProps} />
-                    </div>
-                </>
-            )}
-        </>
-    );
+  return (
+    <>
+      <Head>
+        <title>KOHA</title>
+      </Head>
+      <Header />
+      <div className="body-container">
+        <Component {...pageProps} />
+      </div>
+      <Footer />
+    </>
+  );
 }
 
 export default MyApp;

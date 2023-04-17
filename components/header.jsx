@@ -7,70 +7,62 @@ import { BiMoon, BiSun } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
 
 function Header() {
-    const [darkmode, setDarkMode] = useState(false);
-    const [keypress, setKeypress] = useState(false);
+  const [darkmode, setDarkMode] = useState(false);
+  const [keypress, setKeypress] = useState(false);
 
-    // useEffect(() => {
-    //     window.addEventListener("keypress", (e) => {
-    //         console.log(e);
-    //         if (e.key === "/") {
-    //             setKeypress(true);
-    //         }
-    //     });
-    // }, []);
+  // useEffect(() => {
+  //     window.addEventListener("keypress", (e) => {
+  //         console.log(e);
+  //         if (e.key === "/") {
+  //             setKeypress(true);
+  //         }
+  //     });
+  // }, []);
 
-    return (
-        <div className="header-wrap">
-            <div className="header-layout">
-                <div className="header-left">
-                    <Link href="/">
-                        <div className="logo">
-                            <Image src={Logo} alt="logo" />
-                            <span>KOHA</span>
-                        </div>
-                    </Link>
-                    <div className="search">
-                        <input placeholder="Search" />
-                        <div className="symbol">
-                            <span>/</span>
-                        </div>
-                    </div>
-                    <div className="menu-desktop">
-                        <div>
-                            <Link href="/explore">
-                                <span>Explore</span>
-                            </Link>
-                        </div>
-                        <div>
-                            <Link href="/create">
-                                <span>Create</span>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="header-right">
-                    <div>
-                        <Link href="/connect">
-                            <button>Connect Wallet</button>
-                        </Link>
-                    </div>
-                    <div className="menu-mobile">
-                        <AiOutlineMenu size={25} />
-                    </div>
-                    <button className="dark-mode" onClick={() => setDarkMode(!darkmode)}>
-                        <BiMoon
-                            className={`moon-icon ${darkmode && "darkmode-animation"}`}
-                            size={20}
-                        />
-                        <BiSun
-                            className={`sun-icon ${darkmode && "darkmode-animation"}`}
-                            size={20}
-                        />
-                    </button>
-                </div>
+  return (
+    <div className="header-wrap">
+      <div className="header-layout">
+        <div className="header-left">
+          <Link href="/">
+            <div className="logo">
+              <Image src={Logo} alt="logo" />
+              <span>KOHA</span>
             </div>
+          </Link>
+          <div className="search">
+            <input placeholder="Search" />
+            <div className="symbol">
+              <span>/</span>
+            </div>
+          </div>
+          <div className="menu-desktop">
+            <div>
+              <Link href="/explore">
+                <span>Explore</span>
+              </Link>
+            </div>
+            <div>
+              <Link href="/create">
+                <span>Create</span>
+              </Link>
+            </div>
+          </div>
         </div>
-    );
+        <div className="header-right">
+          <div>
+            <button>Connect Wallet</button>
+          </div>
+          <div className="menu-mobile">
+            <AiOutlineMenu size={25} />
+          </div>
+          <button className="dark-mode" onClick={() => setDarkMode(!darkmode)}>
+            <BiMoon className={`moon-icon ${darkmode && "darkmode-animation"}`} size={20} />
+            <BiSun className={`sun-icon ${darkmode && "darkmode-animation"}`} size={20} />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Header;

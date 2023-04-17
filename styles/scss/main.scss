@@ -2,56 +2,52 @@
 @import "./header.scss";
 @import "./animation.scss";
 @import "./introduction.scss";
-@import "./nft-card.scss";
 @import "./dark-mode.scss";
-@import "./collection-top.scss";
-@import "./nft-list.scss";
-@import "./connect.scss";
 @import "./loading.scss";
 @import "./variable.scss";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    color: var(--color-4);
-    background: var(--color-1);
-    overflow: auto;
-    overflow-x: hidden;
-    position: absolute;
-    z-index: -10;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: var(--color-4);
+  background: var(--color-1);
+  overflow: auto;
+  overflow-x: hidden;
+  position: absolute;
+  z-index: -10;
 }
 
 .body-container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 button {
-    transition: 0.2s linear;
-    cursor: pointer;
+  transition: 0.2s linear;
+  cursor: pointer;
 }
 
 button:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 a {
-    text-decoration: none;
-    color: var(--color-4);
+  text-decoration: none;
+  color: var(--color-4);
 }
