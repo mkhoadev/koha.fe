@@ -5,6 +5,10 @@
 @import "./dark-mode.scss";
 @import "./loading.scss";
 @import "./variable.scss";
+@import "./nft-card.scss";
+@import "./collection.scss";
+@import "./nft.scss";
+@import "./nft-detail.scss";
 
 * {
   margin: 0;
@@ -30,7 +34,7 @@ body {
 .body-container {
   width: 100%;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 0 20px;
 }
 

@@ -1,0 +1,20 @@
+// Nft Owner
+.nft-owner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+
+  & > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  & > div {
+    & > p:last-child {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,9 +1,11 @@
-import Introduction from "../components/introduction";
+import Introduction from "../components/home/introduction";
+import NftCard from "../components/nft/nft-card";
 
 export default function Home() {
   return (
-    <div>
+    <section>
       <Introduction />
-    </div>
+      <NftCard />
+    </section>
   );
 }
